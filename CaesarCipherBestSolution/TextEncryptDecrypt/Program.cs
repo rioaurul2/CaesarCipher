@@ -9,9 +9,10 @@
                 - Eliminați caracterele "^" și "~" din text.
                 - Înlocuiți caracterele "{", "}", "(", ")" cu spații.
                 - Înlocuiți cifrele cu literele corespunzătoare.
+                    Hint: 0 corespunde literei "A"
                 - Inversați ordinea caracterelor rămase în text.
-                - Înlocuiți caracterele cu literele corespunzătoare, utilizând cheile Cheie1 și Cheie2 în mod alternativ.
-                  Cheile sunt folosite in cadrul unui algoritm de criptare cu substitutie.
+                - Înlocuiți caracterele cu literele corespunzătoare, utilizând cheia Constants.Key1.
+                  Cheile sunt folosite in cadrul unui algoritm de criptare cu substitutie, alfabetul recunoscut fiind specificat in Constants.Alphabet.
                     Hint 1: Drept autor al tehnicii de criptare, este creditat unul dintre imparatii romani care au trait intre 12 July 100 BC – 15 March 44 BC
                     Hint 2: Fiecare litera din cheie reprezinta de fapt un deplasament, in functie de indexul ei din alfabet
                 - Afișați mesajul rezultat.

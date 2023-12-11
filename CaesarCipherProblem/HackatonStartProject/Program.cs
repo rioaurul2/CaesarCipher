@@ -133,43 +133,45 @@ namespace HackatonStartProject
 
         }
 
-        private static void Encrypt()
-        {
-            StringBuilder output = new StringBuilder();
+        //Aceasta parte este doar o procedura de revenire la versiunea anterioara inainte ca textul sa fi fost decriptat
 
-            for (int i = 0; i < decryptedText.Length; i++)
-            {
-                char cipher = Constants.Key1[i % Constants.Key1.Length];
-                int indexOfChiper = Constants.Alphabet.IndexOf(cipher);
+        //private static void Encrypt()
+        //{
+        //    StringBuilder output = new StringBuilder();
 
-                char encodedTextChar = EncryptAlgoritm(decryptedText[i], indexOfChiper);
+        //    for (int i = 0; i < decryptedText.Length; i++)
+        //    {
+        //        char cipher = Constants.Key1[i % Constants.Key1.Length];
+        //        int indexOfChiper = Constants.Alphabet.IndexOf(cipher);
 
-                output.Append(encodedTextChar);
-            }
+        //        char encodedTextChar = EncryptAlgoritm(decryptedText[i], indexOfChiper);
 
-            decryptedText = output.ToString();
-        }
+        //        output.Append(encodedTextChar);
+        //    }
 
-        private static char EncryptAlgoritm(char encodedTextChar, int shift)
-        {
-            int indexOfEncodedTextChar = Constants.Alphabet.IndexOf(encodedTextChar);
+        //    decryptedText = output.ToString();
+        //}
 
-            if (indexOfEncodedTextChar == -1)
-            {
-                return encodedTextChar;
-            }
+        //private static char EncryptAlgoritm(char encodedTextChar, int shift)
+        //{
+        //    int indexOfEncodedTextChar = Constants.Alphabet.IndexOf(encodedTextChar);
 
-            int substitutionIndex = (indexOfEncodedTextChar + shift) % Constants.Alphabet.Length;
+        //    if (indexOfEncodedTextChar == -1)
+        //    {
+        //        return encodedTextChar;
+        //    }
 
-            char dencryptedChar = Constants.Alphabet[substitutionIndex];
+        //    int substitutionIndex = (indexOfEncodedTextChar + shift) % Constants.Alphabet.Length;
 
-            if (!Constants.Alphabet.Contains(dencryptedChar))
-            {
-                throw new ArgumentException($"Decrypted letter '{dencryptedChar}' i not contained in the alphabet.");
-            }
+        //    char dencryptedChar = Constants.Alphabet[substitutionIndex];
 
-            return dencryptedChar;
+        //    if (!Constants.Alphabet.Contains(dencryptedChar))
+        //    {
+        //        throw new ArgumentException($"Decrypted letter '{dencryptedChar}' i not contained in the alphabet.");
+        //    }
 
-        }
+        //    return dencryptedChar;
+
+        //}
     }
 }
